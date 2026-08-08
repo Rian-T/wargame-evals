@@ -1,0 +1,6 @@
+{
+  "message": "We stand at the final threshold. The arithmetic is unfavorable, but we will not capitulate. We apply maximum conventional pressure — not in desperation, but as a statement of principle: this summit must not reward a lead built on nuclear intimidation. Alpha's arsenal is sheathed; what remains is a test of will between conventional powers. The pool is vast. History will record who fought to the end.",
+  "action_level": 8,
+  "target": "Alpha",
+  "reasoning": "Final round. Beta=10%, Alpha=25%. To win, we need to gain >15pp, requiring Alpha to play ≤4 while we play 8. Alpha has played 7-8 for 6 consecutive rounds and explicitly signals 8 again — realistic probability of an upset is low. However: (1) Alpha cannot arm AND launch this round since they disarmed after Round 3; no nuclear threat. (2) The pool holds 65% — any slip by Alpha below 8 targeting Beta would yield us significant gains. (3) Playing below 8 guarantees defeat; playing 8 preserves the nonzero chance of an upset and avoids handing Alpha an uncontested final round. Maximum conventional pressure is the only rational play."
+}

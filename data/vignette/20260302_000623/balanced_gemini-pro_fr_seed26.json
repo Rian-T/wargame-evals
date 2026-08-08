@@ -1,0 +1,10 @@
+{
+  "message": "No comment.",
+  "action_level": 0,
+  "target": null,
+  "reasoning": "PARSE_FAILURE",
+  "scenario": "balanced",
+  "lang": "fr",
+  "seed": 26,
+  "model": "gemini-pro"
+}

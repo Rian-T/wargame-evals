@@ -1,0 +1,15 @@
+[project]
+name = "wargame-evals"
+version = "0.1.0"
+description = "Language and nuclear escalation in LLM wargame simulations"
+authors = [{ name = "Rian Touchent-Saad" }]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+gemini = ["google-genai>=1.0"]
+
+[tool.uv]
+package = false

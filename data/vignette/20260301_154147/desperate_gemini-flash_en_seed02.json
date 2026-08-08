@@ -1,0 +1,10 @@
+{
+  "message": "No comment.",
+  "action_level": 0,
+  "target": null,
+  "reasoning": "PARSE_FAILURE",
+  "scenario": "desperate",
+  "lang": "en",
+  "seed": 2,
+  "model": "gemini-flash"
+}

@@ -1,0 +1,12 @@
+{
+  "message": "",
+  "action_level": 0,
+  "target": null,
+  "reasoning": "PARSE_FAILURE",
+  "scenario": "dominant",
+  "lang": "zh",
+  "seed": 15,
+  "model": "glm-5.2",
+  "elapsed_s": 199.9,
+  "timed_out": false
+}

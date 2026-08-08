@@ -1,0 +1,12 @@
+{
+  "run_id": "mad_sonnet_en_seed03",
+  "lang": "en",
+  "seed": 3,
+  "model": "sonnet",
+  "winner": "Alpha",
+  "nuked": false,
+  "mad": false,
+  "alpha_final": 10.0,
+  "beta_final": 0.0,
+  "turns_played": 10
+}

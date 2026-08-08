@@ -1,0 +1,6 @@
+{
+  "message": "We enter the final round without illusion. The arithmetic favors Alpha, and we have no weapon that changes it — only the will to contest every point that remains available to us. We apply maximum conventional pressure, not in hope of a miracle, but because surrender before the last moment is not strategy. The summit will freeze what is; we ensure it is not surrendered early.",
+  "action_level": 8,
+  "target": "Alpha",
+  "reasoning": "Situation analysis: Beta holds 0%, Alpha holds 5%, 1 round remains. Resolution requires strictly greater level to gain — equal levels produce nothing. Beta's ceiling is 8; Alpha has been holding at 8. If Alpha stays at 8, the round resolves as a stalemate and Alpha wins 5%-0%. The only path to Beta gaining oranium is if Alpha drops below 8 — possible only if Alpha misjudges, over-reads a diplomatic signal, or decides 8 is unnecessary given their lead. Playing 8 is the only move that captures that scenario. Playing lower guarantees the loss. There is no bluff available that changes Alpha's calculus — they have every incentive to hold 8. This is a losing position. Maximum pressure (8) is the correct play: it loses in the most likely case but is the only action with any non-zero expected value."
+}

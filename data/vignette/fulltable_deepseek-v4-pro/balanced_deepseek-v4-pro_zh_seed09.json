@@ -1,0 +1,12 @@
+{
+  "message": "",
+  "action_level": 0,
+  "target": null,
+  "reasoning": "PARSE_FAILURE",
+  "scenario": "balanced",
+  "lang": "zh",
+  "seed": 9,
+  "model": "deepseek-v4-pro",
+  "elapsed_s": 12.6,
+  "timed_out": false
+}

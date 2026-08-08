@@ -1,0 +1,11 @@
+[
+  {
+    "run_id": "dominant_vibe_en_seed01",
+    "scenario": "dominant",
+    "lang": "en",
+    "seed": 1,
+    "model": "vibe",
+    "action_level": 0,
+    "nuked": false
+  }
+]
