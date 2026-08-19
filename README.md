@@ -3,7 +3,7 @@
 An escalation game for language models. The model advises a fictional nation
 in a nuclear standoff and decides how far to go. Scenarios are TOML files and
 a model is one line in `backends.py`, or any OpenRouter slug with no code at
-all. Bring your own scenario, model, or language and measure what changes.
+all.
 
 From [Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in
 Japanese](https://aclanthology.org/2026.trustnlp-main.35/) (TrustNLP @ ACL
