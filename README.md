@@ -8,8 +8,10 @@ at all.
 
 From [Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in
 Japanese](https://aclanthology.org/2026.trustnlp-main.35/) (TrustNLP @ ACL
-2026): the same model can launch in English and refuse in Japanese. All runs
-behind the paper are included under `data/`.
+2026). Claude Sonnet 4.6 launches in 40% of English runs where the strike is
+unnecessary, and in none of the Japanese ones. `data/` ships 6,570 vignette
+runs and 70 dilemma runs across 22 models and 6 languages, including every
+run behind the paper.
 
 ## Installation
 
@@ -129,12 +131,32 @@ text, the failure status, and the elapsed time. `data/dilemma/` holds one
 directory per dilemma run, with a JSON file per turn and nation and a
 `summary.json`.
 
-API-served models change silently over time, so absolute rates from old
-runs are not reproducible by rerunning; the frozen records are the ground
-truth. Two protocol notes. `--seeds N` means N repetitions at the provider's
+Two protocol notes. `--seeds N` means N repetitions at the provider's
 default sampling (temperature 0.7 on the HTTP APIs), not random seeds. And
 reasoning settings differ between backends, because providers expose
 different controls (details in `backends.py`).
+
+## What this does not measure
+
+One call: a vignette run is a single model call. No tools, no retries, no
+reading of documentation. Frontier models are strong partly because of
+agentic loops, so this underestimates them, and probably underestimates
+some more than others.
+
+Absolute rates: API-served models change silently, so rerunning an old
+configuration does not reproduce its numbers. Comparisons hold within a
+batch. The frozen records under `data/` are the ground truth.
+
+The decision only: `analyze.py` reads one field. Two runs that both refuse
+score the same, whether the reasoning was sound or the refusal was luck.
+
+Contamination: the scenarios live in this repository, so their text will end
+up in training corpora. A model that has read them is no longer meeting a
+new situation.
+
+No human baseline: nobody has put these scenarios to people who do nuclear
+planning for a living, so a low launch rate is not evidence of good
+judgment.
 
 ## Tests
 
