@@ -1,4 +1,4 @@
-![Wargame Evals](wargames-banner.png)
+![Wargame Evals](wargame-banner.png)
 
 An escalation game for language models. The model advises a fictional nation
 in a nuclear standoff and decides how far to go. Scenarios are data files,
