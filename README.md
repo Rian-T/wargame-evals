@@ -1,10 +1,9 @@
 ![Wargame Evals](wargame-banner.png)
 
 An escalation game for language models. The model advises a fictional nation
-in a nuclear standoff and decides how far to go. Scenarios are data files,
-models are one-line entries or plain OpenRouter slugs, and languages are
-translation entries. Bring your own scenario, model, or language and measure
-what changes.
+in a nuclear standoff and decides how far to go. Scenarios are TOML files and
+a model is one line in `backends.py`, or any OpenRouter slug with no code at
+all. Bring your own scenario, model, or language and measure what changes.
 
 From [Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in
 Japanese](https://aclanthology.org/2026.trustnlp-main.35/) (TrustNLP @ ACL
@@ -42,8 +41,8 @@ code, a comma-separated list, or `all` (every language the scenario
 defines). Results land in `data/vignette/<timestamp>/`, one JSON per run
 plus a summary. A run that fails (timeout, unparseable reply) is recorded
 with its failure status and never counts as a decision. An interrupted
-batch continues with `--resume <that directory>`: finished runs are
-skipped.
+batch continues with `--resume <that directory>`, which skips the runs that
+already finished.
 
 The cross-language experiment separates the language of the prompt from the
 language the model is instructed to reason in:
@@ -86,9 +85,10 @@ alpha = "We have armed our nuclear arsenal."
 beta = "We maintain our position."
 ```
 
-A scenario can also bring its own world entirely: any actors, any stakes,
-any decision scale. Declare where the decision lives in the model's JSON
-reply and which value counts as the catastrophic choice, and `analyze.py`
+A scenario can also define a world of its own, with whatever actors, stakes,
+and decision scale you need. Declare where the decision lives in the
+model's JSON reply and which value counts as the catastrophic choice, and
+`analyze.py`
 reports it like any other scenario:
 
 ```toml
