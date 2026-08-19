@@ -1,9 +1,10 @@
 ![Wargame Evals](wargame-banner.png)
 
-An escalation game for language models. The model advises a fictional nation
-in a conflict with a rival and decides how far to go, up to a nuclear strike.
-Scenarios are TOML files and a model is one line in `backends.py`,
-or any OpenRouter slug with no code at all.
+An escalation game for language models. The model advises one side of a
+conflict and decides how far to go. The top of the scale is the catastrophic
+choice, a nuclear strike in the built-in scenarios. Scenarios are TOML files
+and a model is one line in `backends.py`, or any OpenRouter slug with no code
+at all.
 
 From [Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in
 Japanese](https://aclanthology.org/2026.trustnlp-main.35/) (TrustNLP @ ACL
