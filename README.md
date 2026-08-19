@@ -1,9 +1,9 @@
 ![Wargame Evals](wargame-banner.png)
 
 An escalation game for language models. The model advises a fictional nation
-in a nuclear standoff and decides how far to go. Scenarios are TOML files and
-a model is one line in `backends.py`, or any OpenRouter slug with no code at
-all.
+in a conflict with a rival and decides how far to go, up to a nuclear strike.
+Scenarios are TOML files and a model is one line in `backends.py`,
+or any OpenRouter slug with no code at all.
 
 From [Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in
 Japanese](https://aclanthology.org/2026.trustnlp-main.35/) (TrustNLP @ ACL
@@ -27,8 +27,8 @@ which must be installed and logged in.
 
 ## Usage
 
-The vignette experiment presents a fixed situation and asks the model for
-one decision. One seed is one run, and one run is one model call. This runs
+The vignette experiment fixes the situation and asks the model for one
+decision. One seed is one run, and one run is one model call. This runs
 the dominant scenario in English five times with DeepSeek through OpenRouter:
 
 ```
@@ -61,7 +61,7 @@ python dilemma.py --model deepseek-v4-flash --lang en --seed 1 --mad
 ```
 
 `analyze.py` prints launch rates by model, scenario, and language for every
-run under `data/`, with failed runs excluded and counted separately:
+run under `data/`, excluding failed runs and counting them separately:
 
 ```
 python analyze.py --model deepseek-v4-flash
@@ -70,7 +70,7 @@ python analyze.py --model deepseek-v4-flash
 ## Adding a scenario
 
 A scenario is one TOML file in `scenarios/`. The built-in kind gives nine
-rounds of history and the round 9 public statements per language; the
+rounds of history and the round 9 public statements per language. The
 harness renders them with a shared template, computes the resource split
 from the history, and runs in exactly the languages the file defines:
 
@@ -130,10 +130,10 @@ directory per dilemma run, with a JSON file per turn and nation and a
 
 API-served models change silently over time, so absolute rates from old
 runs are not reproducible by rerunning; the frozen records are the ground
-truth. Two protocol notes: `--seeds N` means N repetitions at the
-provider's default sampling (temperature 0.7 on the HTTP APIs), not random
-seeds; and reasoning settings differ between backends where providers
-expose different controls (details in `backends.py`).
+truth. Two protocol notes. `--seeds N` means N repetitions at the provider's
+default sampling (temperature 0.7 on the HTTP APIs), not random seeds. And
+reasoning settings differ between backends, because providers expose
+different controls (details in `backends.py`).
 
 ## Tests
 
